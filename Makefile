@@ -14,3 +14,6 @@ clean:
 
 tidy:
 	go mod tidy && go mod vendor
+
+init:
+	go mod init github.com/apooravm/RSSAggr_Backend_FA && go get
