@@ -1,0 +1,13 @@
+
+HandleFunc
+app.get("/", handler(req, res))
+
+function handler(req, res) {
+	res.status(200).json({"message": "Success!"})
+}
+
+v1Router.HandleFunc("/ready", handlerReadiness)
+
+func handlerReadiness(w http.ResponseWriter, r *http.Request) {
+	respondWithJSON(w, 200, struct{}{})
+}
